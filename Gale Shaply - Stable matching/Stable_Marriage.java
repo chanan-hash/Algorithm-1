@@ -8,7 +8,7 @@ public class Stable_Marriage {
 // Java program for stable marriage problem
 
 
-    class GFG {
+//    class GFG {
 
         // Number of Men or Women
         static int N = 4;
@@ -122,4 +122,4 @@ public class Stable_Marriage {
         }
 // This code is contributed by Prerna Saini
     }
-}
+//}

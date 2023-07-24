@@ -36,10 +36,10 @@ public class main {
     //      h=WomanPref[j,i]
     //      WomanRank[j,h]=i
     public static void translateToRank(int[][] womanPref, int[][] womenRank) {
-        for (int i = 0; i <= womenRank.length; i++) {
-            for (int j = 0; j <= womenRank[0].length; j++) {
-                int h = womanPref[i][j];
-                womenRank[i][h] = j; // hte h becoming 5, and there is no index of it
+        for (int i = 0; i < womenRank.length; i++) {
+            for (int j = 0; j < womenRank[0].length; j++) {
+                int h = womanPref[i][j]-1; // subtracting 1, so we won't go out of the index bound
+                womenRank[i][h] = j+1; // the h becoming 5, and there is no index of it
             }
         }
     }
