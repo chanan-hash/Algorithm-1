@@ -60,9 +60,21 @@ public class MaxSubArray {
             return arr[0];
         }
         int mid = arr.length/2;
-        int maxL = MaxSubArr(System.arraycopy(arr, 0, arr, mid, mid)); // O(log(n))
-        int maxR = MaxSubArr(System.arraycopy(arr, mid, arr, arr.length-1, mid)); // O(log(n))
+        // need to path both of half array, till mid and from mid
+//        int maxL = MaxSubArr(System.arraycopy(arr, 0, arr, mid, mid)); // O(log(n))
+//        int maxR = MaxSubArr(System.arraycopy(arr, mid, arr, arr.length-1, mid)); // O(log(n))
+        int maxL = MaxSubArr(CopyArrayTill(arr,0,mid));
+        int maxR = MaxSubArr(CopyArrayTill(arr,mid,arr.length-1));
+
         int maxM = MaxCrossingSum(arr,mid); // O(n)
         return max3(maxM,maxL,maxR);
+    }
+
+    public static int[] CopyArrayTill(int[] arr, int start, int end){
+        int[] a = new int[end-start+1];
+        for (int i = start; i < end; i++) {
+            a[i] = arr[i];
+        }
+        return a;
     }
 }
