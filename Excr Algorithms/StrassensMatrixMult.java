@@ -23,6 +23,7 @@ public class StrassensMatrixMult {
      * https://www.geeksforgeeks.org/implementing-strassens-algorithm-in-java/
      */
 
+    /*
     // Java Program to Implement Strassen Algorithm
 
     // Class Strassen matrix multiplication
@@ -263,5 +264,5 @@ public class StrassensMatrixMult {
             }
         }
     }
-
+*/
 }
